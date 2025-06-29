@@ -3,17 +3,16 @@
 
 
  import React from 'react';
-import { ChevronDown } from 'lucide-react';
 
 export default function Development() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-lime-200 to-white px-4 text-black">
       {/* About Button */}
       <div className="absolute top-6 right-6">
-        <button className="flex items-center gap-1 border-2 border-black px-4 py-1 rounded-full hover:bg-black hover:text-white transition">
-          <ChevronDown size={16} />
-          About
-        </button>
+        {/* <button className="flex items-center gap-1 border-2 border-black px-4 py-1 rounded-full hover:bg-black hover:text-white transition">
+          <ChevronDown size={16} /> */}
+          {/* About */}
+        {/* </button> */}
       </div>
 
       {/* Hero Heading */}

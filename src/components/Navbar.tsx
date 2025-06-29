@@ -1,31 +1,62 @@
+'use client';
+
 import React from 'react';
-import { MoveRight } from 'lucide-react';
+import { MoveRight, Menu } from 'lucide-react';
+import { ModeToggle } from './Button/ModeToggle';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 
 export default function Navbar() {
   return (
-    <div className=" ">
-      <nav className="flex items-center justify-between px-6 py-4 border bg-gradient-to-r from-white via-white to-[#d4fff5] rounded-lg">
-        {/* Logo */}
-        <div>
-          <h1 className="text-xl font-bold uppercase">DEVELOP.ME</h1>
+    <nav className="border rounded-lg px-6 py-4">
+      <div className="flex items-center justify-between">
+        <h1 className="text-xl font-bold uppercase">DEVELOP.ME</h1>
+
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-6 font-medium">
+          <ModeToggle />
+          <button className="hover:underline">Home</button>
+          <button className="hover:underline">About</button>
+          <button className="hover:underline">Portfolio</button>
+          <button className="hover:underline">Blog</button>
+          <Button
+            variant="outline"
+            className="flex items-center gap-2 border-2 rounded-full"
+          >
+            <span className="rounded-full border-2 p-1">
+              <MoveRight size={16} />
+            </span>
+            Start Project
+          </Button>
         </div>
 
-        {/* Navigation Links */}
-        <div className="flex space-x-6  text-black font-medium">
-          <h1 className="cursor-pointer hover:underline mt-2">Home</h1>
-          <h1 className="cursor-pointer hover:underline mt-2">About</h1>
-          <h1 className="cursor-pointer hover:underline mt-2">Portfolio</h1>
-          <h1 className="cursor-pointer hover:underline mt-2">Blog</h1>
-       
-
-        {/* Start Project Button */}
-        
-          <button className="flex items-center gap-  px-4 py-2 border-2 border-black rounded-full hover:bg-black hover:text-white transition">
-          <span className='rounded-full text-black border-2 border-black px-1 py-1 -ml-4 mr-2  '>  <MoveRight size={18} /></span>
-            <span className="capitalize">Start Project</span>
-          </button>
+        {/* Mobile Menu */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon">
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="space-y-6">
+              <h2 className="text-lg font-bold pt-4 ">Menu</h2>
+              <p className='text-center'>              <ModeToggle />
+</p>
+              <button className="block w-full text-center">Home</button>
+              <button className="block w-full text-center">About</button>
+              <button className="block w-full text-center">Portfolio</button>
+              <button className="block w-full text-center">Blog</button>
+              <Button variant="outline" className="max-w-6xl rounded-full flex gap-2">
+                <MoveRight size={16} /> Start Project
+              </Button>
+            </SheetContent>
+          </Sheet>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
