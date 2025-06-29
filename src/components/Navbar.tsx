@@ -1,18 +1,14 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { MoveRight, Menu } from 'lucide-react';
-import { ModeToggle } from './Button/ModeToggle';
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from '@/components/ui/sheet';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { MoveRight, Menu } from "lucide-react";
+import { ModeToggle } from "./Button/ModeToggle";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   return (
-    <nav className="border rounded-lg px-6 py-4">
+    <nav className="border rounded-lg px-6 py-4 ">
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold uppercase">DEVELOP.ME</h1>
 
@@ -44,13 +40,18 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="space-y-6">
               <h2 className="text-lg font-bold pt-4 ">Menu</h2>
-              <p className='text-center'>              <ModeToggle />
-</p>
+              <p className="text-center">
+                {" "}
+                <ModeToggle />
+              </p>
               <button className="block w-full text-center">Home</button>
               <button className="block w-full text-center">About</button>
               <button className="block w-full text-center">Portfolio</button>
               <button className="block w-full text-center">Blog</button>
-              <Button variant="outline" className="max-w-6xl rounded-full flex gap-2">
+              <Button
+                variant="outline"
+                className="max-w-6xl rounded-full flex gap-2"
+              >
                 <MoveRight size={16} /> Start Project
               </Button>
             </SheetContent>
