@@ -1,5 +1,6 @@
 import ContactSection from "@/components/ContactSection";
 import Development from "@/components/Development";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import Skills from "@/components/Skills";
@@ -14,6 +15,7 @@ export default function Home() {
       <Development />
       <WorkProcess />
       <ContactSection />
+      <Footer />
     </div>
   );
 }
