@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      {/* <HeroSection />
+      <HeroSection />
       <Skills />
-      <Development />
-      <WorkProcess />
-      <ContactSection /> */}
+      {/* <Development /> */}
+      {/* <WorkProcess /> */}
+      {/* <ContactSection /> */}
     </div>
   );
 }
